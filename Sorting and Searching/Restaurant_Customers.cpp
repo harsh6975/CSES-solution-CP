@@ -50,13 +50,28 @@ int main()
     fast_cin();
     int n;
     cin >> n;
-    int arr[n][2];
+    vector<pair<int, int>> v;
     FOR0(i, n)
     {
-        cin >> arr[i][0];
-        cin >> arr[i][1];
+        int x, y;
+
+        cin >> x;
+        cin >> y;
+        v.push_back({x, true});
+        v.push_back({y, false});
     }
-    sort(arr, arr + n);
-    
+    sort(v.begin(), v.end());
+    int c=0,ans=0;
+    FOR0(i,v.size()){
+        if(v[i].second){
+            c++;
+        }
+        else{
+            c--;
+        }
+        ans=max(ans,c);
+    }
+    cout<<ans;
+
     return 0;
 }
