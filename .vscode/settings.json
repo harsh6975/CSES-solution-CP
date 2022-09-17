@@ -3,6 +3,7 @@
     "C_Cpp.formatting": "clangFormat",
     "files.associations": {
         "cstdlib": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "iostream": "cpp"
     }
 }
